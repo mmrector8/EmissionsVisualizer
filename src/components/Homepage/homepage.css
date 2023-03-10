@@ -1,8 +1,10 @@
 
 .webpage-title {
     font-family: 'Fredoka One', cursive;
+    color: rgb(0, 136, 255);
     text-align: center;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 56px;
     margin-top: 50px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
