@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react'
 const CO2DataContext = React.createContext();
 
 export function useCO2Data(){
-    return useContext(CO2Data)
+    return useContext(CO2DataContext)
 }
 
 const DataProvider = ({children})=>{
@@ -12,7 +12,7 @@ const DataProvider = ({children})=>{
 
     useEffect(()=>{
         const url = 'https://api.worldbank.org/v2/country/all/indicator/EN.ATM.CO2E.KT?format=json&per_page=3000';
-       if (!dataLoaded){
+       if (!dataLoaded.current){
            fetch(url)
                .then((res) => res.json())
                .then((data) => {
@@ -24,13 +24,14 @@ const DataProvider = ({children})=>{
                })
        }
 
-    }, [CO2Data])
+    }, [dataLoaded.current])
 
     return (
         <>
-            <CO2Data.Provider value={CO2Data}>
+            <CO2DataContext.Provider value={CO2Data}>
+                {console.log(CO2Data)}
                 {children}
-            </CO2Data.Provider>
+            </CO2DataContext.Provider>
         </>
     )
 
