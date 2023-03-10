@@ -1,9 +1,12 @@
 import Homepage from "./components/Homepage";
+import DataProvider from "./util/CO2-Provider";
 function App() {
   return (
-    <div className="App">
-      <Homepage />
-    </div>
+    <DataProvider>
+      <div className="App">
+        <Homepage />
+      </div>
+    </DataProvider>
   );
 }
 
