@@ -29,7 +29,6 @@ const DataProvider = ({children})=>{
     return (
         <>
             <CO2DataContext.Provider value={CO2Data}>
-                {console.log(CO2Data)}
                 {children}
             </CO2DataContext.Provider>
         </>
