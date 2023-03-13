@@ -24,7 +24,7 @@ const DataProvider = ({children})=>{
                })
        }
 
-    }, [CO2Data])
+    }, [dataLoaded.current])
 
     return (
         <>
