@@ -2,3 +2,25 @@
     width: 800px;
     height: 800px;
 }
+
+.marks .sphere {
+    fill: #51a7f4;
+    position: fixed !important;
+    left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.marks .graticule {
+    fill: none;
+    stroke: #C0C0BB;
+}
+
+.marks .feature {
+    fill: #0b7220;
+    stroke: #C0C0BB;
+}
+
+.marks .interiors {
+    fill: none;
+    stroke: #064c0c;
+}

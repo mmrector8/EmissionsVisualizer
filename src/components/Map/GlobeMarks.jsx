@@ -1,9 +1,10 @@
 import { geoOrthographic, geoPath, geoGraticule } from 'd3-geo'
+const projection = geoOrthographic();
+const path = geoPath(projection);
+const graticule = geoGraticule();
+
 
 const Marks = ({ data: { land, interiors } }) => {
-    const projection = geoOrthographic();
-    const path = geoPath(projection);
-    const graticule = geoGraticule();
 
     return (
         <g className="marks" >
