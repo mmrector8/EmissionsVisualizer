@@ -7,4 +7,11 @@
     font-size: 56px;
     margin-top: 50px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-bottom: 30px;
+}
+
+.map-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
