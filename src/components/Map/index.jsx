@@ -7,9 +7,8 @@ import Marks from "./GlobeMarks";
 
 const Map = ()=> {
     const CO2Data = useCO2Data();
-     const svgRef = useRef(null);
-    const jsonUrl = 'countries-50m.json';
-    const [data, setData] = useState(null);
+    const svgRef = useRef(null);
+    const [data, setData] = useState("");
 
     useEffect(() => {
         d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json").then(topojsonData => {
@@ -20,7 +19,7 @@ const Map = ()=> {
                     topojsonData, countries, (a, b) => a !== b)
             })
         });
-    }, [data])
+    }, [])
      return (
         <svg className='svg'>
             <Marks data={data}/>

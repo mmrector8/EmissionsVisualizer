@@ -1,5 +1,4 @@
-import * as d3 from "d3";
-import * as topojson from "topojson-client"; 
+import { geoOrthographic, geoPath, geoGraticule } from 'd3-geo'
 
 const Marks = ({ data: { land, interiors } }) => {
     const projection = geoOrthographic();
@@ -10,8 +9,8 @@ const Marks = ({ data: { land, interiors } }) => {
         <g className="marks" >
             <path className="sphere" d={path({ type: 'Sphere' })} />
             {
-                land.features.map(feature => (
-                    <path className="feature" d={path(feature)} />
+                land?.features?.map((feature, idx) => (
+                    <path className="feature" d={path(feature)} key={idx}/>
                 ))
             }
             <path className="interiors" d={path(interiors)} />
