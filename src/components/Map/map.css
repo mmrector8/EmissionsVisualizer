@@ -12,16 +12,19 @@
 }
 
 .marks .graticule {
+    cursor: pointer;
     fill: none;
     stroke: #C0C0BB;
 }
 
 .marks .feature {
+    cursor: pointer;
     fill: #0b7220;
     stroke: #C0C0BB;
 }
 
 .marks .interiors {
+     cursor: pointer;
     fill: none;
     stroke: #064c0c;
 }
