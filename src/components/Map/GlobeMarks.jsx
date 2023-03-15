@@ -13,7 +13,7 @@ const Marks = ({ data: { land, interiors } }) => {
     }, [setMousePosition])
     return (
         <g className="marks" onMouseMove= {handleMouseMove}>
-            {projection.rotate([MousePosition.x + 30 / 200, -(MousePosition.y - 0.15), 0])}
+            {projection.rotate([MousePosition.x + 30 / 1000, -(MousePosition.y - 0.05), 0])}
             <path className="sphere" d={path({ type: 'Sphere' })} />
             {
                 land?.features?.map((feature, idx) => (
