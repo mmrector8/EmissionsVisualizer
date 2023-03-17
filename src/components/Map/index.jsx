@@ -9,7 +9,7 @@ const Map = ()=> {
     // const CO2Data = useCO2Data();
     const svgRef = useRef(null);
     const [data, setData] = useState("");
-    const [scale, setScale] = useState(450)
+    const [scale, setScale] = useState(350)
 
     useEffect(() => {
         d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json").then(topojsonData => {
@@ -33,11 +33,11 @@ const Map = ()=> {
 
      return (
         <>
-            <svg className='svg'>
+            <svg className='svg'  >
                 <Globe data={data} scale={scale}/>
             </svg>
-            <button onClick={increaseScale}>+</button>
-            <button onClick={decreaseScale}>-</button>
+            {/* <button onClick={increaseScale}>+</button>
+            <button onClick={decreaseScale}>-</button> */}
          </>
      )
     }

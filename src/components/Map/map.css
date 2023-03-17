@@ -1,12 +1,12 @@
 .svg {
     /* padding-top: 200px; */
-    width: 1000px;
-    height: 1500px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.marks {
-    margin-top: 200px;
-}
 .marks .sphere {
     cursor: pointer;
     fill: #51a7f4;

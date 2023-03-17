@@ -14,7 +14,7 @@ const Globe = ({ data: { land, interiors }, scale } ) => {
     }, [setMousePosition])
     
     return (
-        <g className="marks" onMouseMove= {handleMouseMove}>
+        <g className="marks" transform="translate(0, 100)" onMouseMove= {handleMouseMove} >
             {projection.rotate([MousePosition.x + 30 / 1000, -(MousePosition.y - 0.05), 0])}
             <path className="sphere" d={path({ type: 'Sphere' })} />
             {
