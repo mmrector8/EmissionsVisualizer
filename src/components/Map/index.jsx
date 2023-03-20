@@ -36,9 +36,12 @@ const Map = ()=> {
             <svg className='svg' >
                 <Globe data={data} scale={scale}/>
             </svg>
+            <div className='resize-button-container'>
+                 <button onClick={increaseScale} className='zoom-buttons'>+</button>
+                 <button onClick={decreaseScale} className='zoom-buttons'>-</button>
+            </div>
          </div>
-            <button onClick={increaseScale}>+</button>
-            <button onClick={decreaseScale}>-</button>
+
          </>
      )
     }
