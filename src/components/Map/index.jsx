@@ -6,7 +6,6 @@ import { useCO2Data } from "../../util/CO2-Provider";
 import Globe from "./GlobeMarks";
 
 const Map = ()=> {
-    // const CO2Data = useCO2Data();
     const svgRef = useRef(null);
     const [data, setData] = useState("");
     const [scale, setScale] = useState(350)
@@ -33,9 +32,11 @@ const Map = ()=> {
 
      return (
         <>
-            <svg className='svg'  >
+        <div className="svg-container">
+            <svg className='svg' >
                 <Globe data={data} scale={scale}/>
             </svg>
+         </div>
             <button onClick={increaseScale}>+</button>
             <button onClick={decreaseScale}>-</button>
          </>
