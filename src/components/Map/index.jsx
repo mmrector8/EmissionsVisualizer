@@ -36,8 +36,8 @@ const Map = ()=> {
             <svg className='svg'  >
                 <Globe data={data} scale={scale}/>
             </svg>
-            {/* <button onClick={increaseScale}>+</button>
-            <button onClick={decreaseScale}>-</button> */}
+            <button onClick={increaseScale}>+</button>
+            <button onClick={decreaseScale}>-</button>
          </>
      )
     }
