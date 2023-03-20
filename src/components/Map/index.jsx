@@ -22,11 +22,11 @@ const Map = ()=> {
     }, [])
 
     const increaseScale = useCallback(() => {
-        setScale(prevScale => prevScale * 1.2);
+        setScale(prevScale => prevScale * 1.09);
     }, []);
 
     const decreaseScale = useCallback(() => {
-        setScale(prevScale => prevScale / 1.1);
+        setScale(prevScale => prevScale / 1.09);
     }, []);
 
 
