@@ -8,7 +8,7 @@ const Globe = ({ data: { land, interiors }, scale } ) => {
     const path = geoPath(projection)
     const graticule = geoGraticule();
 
-    const [MousePosition, setMousePosition] = useState({x:0, y:0})
+    const [MousePosition, setMousePosition] = useState({x:null, y:null})
 
     const handleMouseDown = useCallback((event)=>{
         setClicked(true)
