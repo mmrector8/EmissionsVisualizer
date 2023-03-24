@@ -37,7 +37,7 @@ const Map = ()=> {
                 <Globe data={data} scale={scale}/>
             </svg>
             <div className='resize-button-container'>
-                <p>Click buttons to zoom</p>
+                <p>Click to zoom</p>
                 <button onClick={increaseScale} className='zoom-buttons'>+</button>
                 <button onClick={decreaseScale} className='zoom-buttons'>-</button>
             </div>
